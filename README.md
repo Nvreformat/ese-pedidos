@@ -12,7 +12,6 @@ On the clients app, you will be presented with a choice of restaurants. After pi
 
 Once your order is confirmed by the restaurant, you only have to wait for it to be delivered to the location you specified earlier. The payment is made when the order arrives.
 
-
 # Frameworks Used
 
 Frontend:
@@ -27,3 +26,9 @@ Backend:
 Flask
 Flask SocketIO
 SQLAlchemy
+
+# Live Demo
+
+# Building
+
+
