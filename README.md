@@ -15,17 +15,13 @@ Once your order is confirmed by the restaurant, you only have to wait for it to 
 # Frameworks Used
 
 Frontend:
-Angular 4
 
-SocketIO
-
-Ionic 2
-Google Maps JS
-
-Backend:
-Flask
-Flask SocketIO
-SQLAlchemy
+Angular 4\
+SocketIO\
+Ionic 2\___________________________________________________________________________________________________________________________________________________________________________ REDS
+Flask\
+Flask SocketIO\
+SQLAlchemy\
 
 # Live Demo
 
