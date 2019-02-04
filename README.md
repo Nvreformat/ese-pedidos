@@ -33,12 +33,13 @@ MariaDB (On live demo server)
 [Clients App](http://siwka.net/ese-pedidos/client)\
 [Restaurants App](http://siwka.net/ese-pedidos/restaurant)
 
-# Things that don't work / TODO
+# Things that don't work
 
 ## Phone verification
 Since this is a paid service and there are many providers with different implementations, I decided to skip this. So you can just log in with any phone number and it will work as if it was a different client account.
 
-## Changing the logo of a restaurant (TODO)
+## Changing the logo of a restaurant
+TODO
 
 # Building
 
