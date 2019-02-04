@@ -6,7 +6,7 @@ This project is meant to facilitate ordering food from restaurants. Instead of c
 
 # How would it work?
 
-There are 2 apps, one is for the clients and the other one is for the restaurants.
+There are 2 apps, one for the clients and another one for the restaurants.
 
 On the clients app, you will be presented with a choice of restaurants. After picking one, you can then select what food you will order and the delivery destination. Upon issuing an order. it will be marked as 'Pending', this means you have to to wait until the restaurant processes (i.e, confirms) your order.
 
@@ -19,6 +19,7 @@ Once your order is confirmed by the restaurant, you only have to wait for it to 
 ### Restaurant Fees
 
 ### Location on map
+Aside from the address, the clients are required to submit the delivery location when issuing an order. This is easily done with the Maps API. Just a few taps.
 
 # Frameworks Used
 
