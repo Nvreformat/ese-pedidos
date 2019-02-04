@@ -1,8 +1,12 @@
 # Ese Pedidos
 
-##### DISCLAIMER: This project was meant to go live in my city, as there's nothing similar there. Due to personal issues I was unable to do this. Therefore, I decided to upload it to GitHub so it wouldn't go to waste. It is NOT intended to be a general purpose solution, it was something that made sense under a very specific context.
+##### DISCLAIMER: This project was meant to go live in my city, as there's nothing similar there. Due to personal issues I was unable to do this. Therefore I decided to upload it to GitHub so it wouldn't go to waste. It is NOT intended to be a general purpose solution, it was something that made sense under a very specific context (a small city).
 
 This project is meant to facilitate ordering food from restaurants. Instead of calling or texting a specific number for ordering food you have an app with a list of restaurants to choose from.
+
+### This has some advantages:
+* You don't need to have many numbers in your agenda to call, instead you have a list with all the restaurants
+* Yo
 
 # How would it work?
 
@@ -15,12 +19,16 @@ Once your order is confirmed by the restaurant, you only have to wait for it to 
 # Features
 
 ### Statistics for restaurants
-My idea for monetizing this was to charge restaurants a small fee (say 5%) 
+
 
 ### Restaurant Fees
+My idea for monetizing this project was to charge restaurants a small fee (say 5%) on every order. 
 
 ### Location on map
 Aside from the address, the clients are required to submit the delivery location when issuing an order. This is easily done with the Maps API. Just a few taps.
+
+### Chat
+When you make an order, a chat between the client and the restaurant is created. This chat is specific to the order
 
 # Frameworks Used
 
@@ -46,7 +54,7 @@ MariaDB (on live demo server)
 # Things that don't work
 
 ## Phone verification
-I originally intended to send an SMS with a code to the phone being verified and make the user enter this code on the app. Since seinding SMS is a paid service and there are many providers with different implementations, I decided to skip this. So you can just log in with any phone number and it will work as if it was a different client account. You'll have to implement this yourself.
+I originally intended to send an SMS with a code to the phone being verified and make the user enter this code on the app. Since sending SMS is a paid service and there are many providers with different implementations, I decided to skip this. So you can just log in with any phone number and it will work as if it was a different client account. You'll have to implement this yourself.
 
 ## Changing the logo of a restaurant
 TODO
