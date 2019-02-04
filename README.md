@@ -5,8 +5,10 @@
 This project is meant to facilitate ordering food from restaurants. Instead of calling or texting a specific number for ordering food you have an app with a list of restaurants to choose from.
 
 ### This has some advantages:
-* You don't need to have many numbers in your agenda to call, instead you have a list with all the restaurants
-* Yo
+* You don't need to have as many numbers in your agenda to call. In fact, you don
+* You get the full restaurant menu, with descriptions and prices.
+* You can order from restaurants you didn't know of, trying new food!
+* Since phone numbers are verified, you have the possiblity to ban numbers that make fake orders.
 
 # How would it work?
 
@@ -28,7 +30,8 @@ My idea for monetizing this project was to charge restaurants a small fee (say 5
 Aside from the address, the clients are required to submit the delivery location when issuing an order. This is easily done with the Maps API. Just a few taps.
 
 ### Chat
-When you make an order, a chat between the client and the restaurant is created. This chat is specific to the order
+When you make an order, a chat between the client and the restaurant is created. This chat is specific to the order.\
+This is useful in the following scenario: A restaurant
 
 # Frameworks Used
 
