@@ -49,5 +49,8 @@ If you don't, install it:
 >sudo npm -g install cordova ionic
 
 Then just go to any app folder (either client or restaurant) and execute this command to build and test:
->ionic serve --lab
+>ionic serve --lab\
 The first build may take a few minutes as it needs to download the dependencies.
+
+### Server
+
