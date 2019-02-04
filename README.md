@@ -42,5 +42,8 @@ Since this is a paid service and there are many providers with different impleme
 TODO
 
 # Building
+### Client/Restaurant Apps
+Make sure you have npm installed
 
-
+If you don't, install it:
+>sudo npm -g install cordova ionic
