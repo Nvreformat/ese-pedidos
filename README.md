@@ -26,7 +26,7 @@ Google Maps JS
 Flask\
 Flask SocketIO\
 SQLAlchemy
-MariaDB (On live demo server)
+MariaDB (on live demo server)
 
 # Live Demo
 
@@ -54,4 +54,9 @@ Then just go to any app folder (either client or restaurant) and execute this co
 The first build may take a few minutes as it needs to download the dependencies.
 
 ### Server
+Install python dependencies:
+
+Now the only thing left to do is to configure the db.\
+
+
 
