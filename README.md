@@ -18,13 +18,15 @@ Once your order is confirmed by the restaurant, you only have to wait for it to 
 
 Angular 4\
 SocketIO\
-Ionic 2
+Ionic 2\
+Google Maps JS
 
 ### Backend
 
 Flask\
 Flask SocketIO\
 SQLAlchemy
+MariaDB (On live demo server)
 
 # Live Demo
 
