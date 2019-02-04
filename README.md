@@ -25,6 +25,10 @@ SQLAlchemy\
 
 # Live Demo
 
+# Things that don't work / TODO
+
+Phone verification: Since this is a paid service and there are many providers with different implementations, I decided to skip this. So you can just log in with any phone number as if it was a separate client account.
+
 # Building
 
 
