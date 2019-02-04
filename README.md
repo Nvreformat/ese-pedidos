@@ -1,6 +1,6 @@
 # Ese Pedidos
 
-### DISCLAIMER: This project was meant to go live in my city, as there's nothing like it there. Due to personal issues I was unable to do this so I decided to upload it to GitHub so it wouldn't go to waste.
+### DISCLAIMER: This project was meant to go live in my city, as there's nothing like it there. Due to personal issues I was unable to do this. Therefore, I decided to upload it to GitHub so it wouldn't go to waste.
 
 This project is meant to facilitate ordering food from restaurants. Instead of calling or texting a specific number for ordering food you have an app with a list of restaurants to choose from.
 
@@ -26,7 +26,7 @@ SQLAlchemy\
 # Live Demo
 
 [Clients App](http://siwka.net/ese-pedidos/client)\
-[Restaurants App](http://siwka.net/ese-pedidos/restaurant)\
+[Restaurants App](http://siwka.net/ese-pedidos/restaurant)
 
 # Things that don't work / TODO
 
