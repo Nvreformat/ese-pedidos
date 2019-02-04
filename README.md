@@ -12,6 +12,14 @@ On the clients app, you will be presented with a choice of restaurants. After pi
 
 Once your order is confirmed by the restaurant, you only have to wait for it to be delivered to the location you specified earlier. The payment is made when the order arrives.
 
+# Features
+
+### Statistics for restaurants
+
+### Restaurant Fees
+
+### Location on map
+
 # Frameworks Used
 
 ### Frontend:
@@ -39,7 +47,6 @@ MariaDB (on live demo server)
 Since this is a paid service and there are many providers with different implementations, I decided to skip this. So you can just log in with any phone number and it will work as if it was a different client account.
 
 ## Changing the logo of a restaurant
-TODO
 
 # Building
 ### Client/Restaurant Apps
@@ -48,10 +55,10 @@ Make sure you have npm installed
 If you don't, install it:
 >sudo npm -g install cordova ionic
 
-Then just go to any app folder (either client or restaurant) and execute this command to build and test:
+Then just go to any app folder (either client or restaurant) and run this command to build and test:
 >ionic serve --lab
 
-The first build may take a few minutes as it needs to download the dependencies.
+NOTE: The first build may take a few minutes, if you get a prompt to install 
 
 ### Server
 Install python dependencies:
