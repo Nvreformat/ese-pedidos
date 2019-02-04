@@ -25,8 +25,8 @@ SQLAlchemy\
 
 # Live Demo
 
-[Clients App](http://siwka.net/ese-pedidos/client)\
-[Restaurants App](http://siwka.net/ese-pedidos/restaurant)
+[Clients App][http://siwka.net/ese-pedidos/client]\
+[Restaurants App][http://siwka.net/ese-pedidos/restaurant]
 
 # Things that don't work / TODO
 
