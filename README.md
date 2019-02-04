@@ -1,6 +1,6 @@
 # Ese Pedidos
 
-### DISCLAIMER: This project was meant to go live in my city, as there's nothing similar there. Due to personal issues I was unable to do this. Therefore, I decided to upload it to GitHub so it wouldn't go to waste.
+### DISCLAIMER: This project was meant to go live in my city, as there's nothing similar there. Due to personal issues I was unable to do this. Therefore, I decided to upload it to GitHub so it wouldn't go to waste. It is NOT intended to be a general purpose solution, it was something that made sense under a very specific context.
 
 This project is meant to facilitate ordering food from restaurants. Instead of calling or texting a specific number for ordering food you have an app with a list of restaurants to choose from.
 
@@ -15,6 +15,7 @@ Once your order is confirmed by the restaurant, you only have to wait for it to 
 # Features
 
 ### Statistics for restaurants
+My idea for monetizing this was to charge restaurants a small fee (say 5%) 
 
 ### Restaurant Fees
 
