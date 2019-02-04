@@ -25,13 +25,13 @@ SQLAlchemy\
 
 # Live Demo
 
-[Clients App](http://siwka.net/ese-pedidos/client){:target="_blank"}\
-[Restaurants App](http://siwka.net/ese-pedidos/restaurant){:target="_blank"}
+[Clients App](http://siwka.net/ese-pedidos/client)\
+[Restaurants App](http://siwka.net/ese-pedidos/restaurant)
 
 # Things that don't work / TODO
 
 ## Phone verification
-Since this is a paid service and there are many providers with different implementations, I decided to skip this. So you can just log in with any phone number as if it was a separate client account.
+Since this is a paid service and there are many providers with different implementations, I decided to skip this. So you can just log in with any phone number and it will work as if it was a different client account.
 
 ## Changing the logo of a restaurant (TODO)
 
