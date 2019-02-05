@@ -43,7 +43,7 @@ SocketIO\
 Ionic 2\
 Google Maps JS
 
-### Backend
+### Backend:
 
 Flask\
 Flask SocketIO\
