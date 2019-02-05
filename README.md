@@ -31,6 +31,7 @@ This is useful when a restaurant can't deliver an order on time. This way, they 
 
 ### Restaurant Fees
 My idea for monetizing this project was to charge restaurants a small fee (say 5%) on every order. At the end of every month I would go personally to each restaurant to collect the fees that were charged.
+Every restaurant has a statistics page where they can see how many in fees they have to pay and have a record of all the orders they had, allowing them to check their balances.
 
 
 # Frameworks Used
