@@ -2,7 +2,7 @@
 
 ##### DISCLAIMER: This project was meant to go live in my city, as there's nothing similar there. Due to personal issues I was unable to do this. Therefore I decided to upload it to GitHub so it wouldn't go to waste. It is NOT intended to be a general purpose solution, it was something that made sense under a very specific context (a small city).
 
-This project is meant to facilitate ordering food from restaurants. Instead of calling or texting a specific number for ordering food you have an app with a list of restaurants to choose from.
+This project is meant to ease the process of ordering food from restaurants. Instead of calling or texting a specific number for ordering food you get an app with a list of restaurants to choose from.
 
 ### This has some advantages:
 * You don't need to have as many restaurant numbers in your contacts. In fact, you don't need to have any numbers at all.
@@ -16,15 +16,11 @@ There are 2 apps, one for the clients and another one for the restaurants.
 
 On the clients app, you will be presented with a choice of restaurants. After picking one, you can then select what food you will order and the delivery destination. Upon issuing an order. it will be marked as 'Pending', this means you have to to wait until the restaurant processes (i.e, confirms) your order.
 
+When the restaurant sees your order, it will verify if it's a valid order (i.e you didn't order 100 units of the same thing and have a valid delivery address) and then will mark your order as 'Confirmed'
+
 Once your order is confirmed by the restaurant, you only have to wait for it to be delivered to the location you specified earlier. The payment is made when the order arrives.
 
 # Features
-
-### Statistics for restaurants
-
-
-### Restaurant Fees
-My idea for monetizing this project was to charge restaurants a small fee (say 5%) on every order. At the end of every month I would go personally to each restaurant to collect the fees that were charged.
 
 ### Location on map
 Aside from the address, the clients are required to submit the delivery location when issuing an order. This is easily done with the Maps API, it only takes a few taps.
@@ -32,6 +28,9 @@ Aside from the address, the clients are required to submit the delivery location
 ### Chat
 When you make an order, a chat between the client and the restaurant is created. This chat is specific to the order.\
 This is useful when a restaurant can't deliver an order on time. This way, they can tell the client via chat how long they have to wait for their order. Sometimes they may be missing a specific ingredient for the food, in which case they can tell the client if they want to continue the order or cancel ir altogether.
+
+### Restaurant Fees
+My idea for monetizing this project was to charge restaurants a small fee (say 5%) on every order. At the end of every month I would go personally to each restaurant to collect the fees that were charged.
 
 # Frameworks Used
 
@@ -64,9 +63,9 @@ TODO
 
 # Building
 ### Client/Restaurant Apps
-Make sure you have npm installed
+First, make sure you have npm installed.
 
-If you don't, install it:
+Install cordova and ionic
 >sudo npm -g install cordova ionic
 
 Then just go to any app folder (either client or restaurant) and run this command to build and test:
@@ -80,10 +79,10 @@ Install python dependencies:
 Now the only thing left to do is to configure the db.\
 Open config.ini in the server folder, and fill it with your DB data:
 >[Database]\
-Host = localhost\
-database = esepedidos\
-username = root\
-password = esepedidos
+Host = host\
+database = dbname\
+username = user\
+password = pass
 
 Run the server:
 > python3 main.py
