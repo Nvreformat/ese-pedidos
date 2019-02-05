@@ -5,10 +5,10 @@
 This project is meant to facilitate ordering food from restaurants. Instead of calling or texting a specific number for ordering food you have an app with a list of restaurants to choose from.
 
 ### This has some advantages:
-* You don't need to have as many numbers in your agenda to call. In fact, you don
-* You get the full restaurant menu, with descriptions and prices.
-* You can order from restaurants you didn't know of, trying new food!
-* Since phone numbers are verified, you have the possiblity to ban numbers that make fake orders.
+* You don't need to have as many restaurant numbers in your contacts. In fact, you don't need to have any numbers at all.
+* You get the full restaurant menu, with descriptions of foods and prices.
+* You can order from restaurants you didn't know of, trying new food.
+* Theoretically, since phone numbers are verified, you (as a restaurant) have the possiblity to ban numbers that make fake orders
 
 # How would it work?
 
@@ -24,10 +24,10 @@ Once your order is confirmed by the restaurant, you only have to wait for it to 
 
 
 ### Restaurant Fees
-My idea for monetizing this project was to charge restaurants a small fee (say 5%) on every order. 
+My idea for monetizing this project was to charge restaurants a small fee (say 5%) on every order. At the end of every month I would go personally to each restaurant to collect the fees that were charged.
 
 ### Location on map
-Aside from the address, the clients are required to submit the delivery location when issuing an order. This is easily done with the Maps API. Just a few taps.
+Aside from the address, the clients are required to submit the delivery location when issuing an order. This is easily done with the Maps API, it only takes a few taps.
 
 ### Chat
 When you make an order, a chat between the client and the restaurant is created. This chat is specific to the order.\
@@ -78,6 +78,13 @@ NOTE: The first build may take a few minutes, if you get a prompt to install
 Install python dependencies:
 
 Now the only thing left to do is to configure the db.\
+Open config.ini in the server folder, and fill it with your DB data:
+>[Database]
+Host = localhost
+database = esepedidos
+username = root
+password = esepedidos
+
 
 
 
