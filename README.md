@@ -79,10 +79,10 @@ Install python dependencies:
 
 Now the only thing left to do is to configure the db.\
 Open config.ini in the server folder, and fill it with your DB data:
->[Database]
-Host = localhost
-database = esepedidos
-username = root
+>[Database]\
+Host = localhost\
+database = esepedidos\
+username = root\
 password = esepedidos
 
 
