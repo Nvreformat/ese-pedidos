@@ -23,7 +23,7 @@ Now, you only have to wait for it to be delivered to the location you specified 
 # Features
 
 ### Location on map
-Aside from the address, the clients are required to submit the delivery location when issuing an order. This is easily done with the Maps API, it only takes a few taps.
+Aside from the address, the clients are required to submit a delivery location when issuing an order. This is easily done with the Maps API, it only takes a few taps.\
 
 ### Chat
 When you make an order, a chat between the client and the restaurant is created. This chat is specific to the order.\
