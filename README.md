@@ -85,6 +85,9 @@ database = esepedidos\
 username = root\
 password = esepedidos
 
+Run the server:
+> python3 main.py
+
 
 
 
