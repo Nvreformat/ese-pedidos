@@ -32,6 +32,7 @@ This is useful when a restaurant can't deliver an order on time. This way, they 
 ### Restaurant Fees
 My idea for monetizing this project was to charge restaurants a small fee (say 5%) on every order. At the end of every month I would go personally to each restaurant to collect the fees that were charged.
 
+
 # Frameworks Used
 
 ### Frontend:
@@ -68,6 +69,9 @@ First, make sure you have npm installed.
 Install cordova and ionic
 >sudo npm -g install cordova ionic
 
+Put your Maps API key on src/index.html of each project:
+><script src="https://maps.googleapis.com/maps/api/js?key=YourAPIKey&callback=initMap"async defer></script>
+
 Then just go to any app folder (either client or restaurant) and run this command to build and test:
 >ionic serve --lab
 
@@ -75,6 +79,7 @@ NOTE: The first build may take a few minutes, if you get a prompt to install
 
 ### Server
 Install python dependencies:
+>pip3 install flask flask_restful flask_socketio flask_cors flask_jsonpify mysqlclient sqlalchemy passlib 
 
 Now the only thing left to do is to configure the db.\
 Open config.ini in the server folder, and fill it with your DB data:
