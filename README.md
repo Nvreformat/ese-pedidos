@@ -18,7 +18,7 @@ On the clients app, you will be presented with a choice of restaurants. After pi
 
 When the restaurant sees your order, it will verify that it's valid (i.e you didn't order +100 units of the same kind and have a valid delivery address) and then will mark your order as 'Confirmed'.
 
-Now, you only have to wait for it to be delivered to the location you specified earlier. The payment is made when the order arrives and the order is marked as 'Finished'.
+Now, you only have to wait for the order to be delivered to the location you specified earlier. The payment is made when it arrives and the order is finally marked as 'Finished'.
 
 # Features
 
