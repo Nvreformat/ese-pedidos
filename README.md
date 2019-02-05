@@ -5,7 +5,7 @@
 This project is meant to ease the process of ordering food from restaurants. Instead of calling or texting a specific number for ordering food you get an app with a list of restaurants to choose from.
 
 ### This has some advantages:
-* You don't need to have as many restaurant numbers in your contacts. In fact, you don't need to have any numbers at all.
+* You don't need to have as many restaurant numbers in your contact list. In fact, you don't need to have any numbers at all.
 * You get the full restaurant menu, with descriptions of foods and prices.
 * You can order from restaurants you didn't know of, trying new food.
 * Theoretically, since phone numbers are verified, you (as a restaurant) have the possiblity to ban numbers that make fake orders
