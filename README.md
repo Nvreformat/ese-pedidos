@@ -16,7 +16,7 @@ There are 2 apps, one for the clients and another one for the restaurants.
 
 On the clients app, you will be presented with a choice of restaurants. After picking one, you can then select what food you will order and the delivery destination. Upon issuing an order. it will be marked as 'Pending', this means you have to to wait until the restaurant processes (i.e, confirms) your order.
 
-When the restaurant sees your order, it will verify if it's a valid order (i.e you didn't order 100 units of the same thing and have a valid delivery address) and then will mark your order as 'Confirmed'
+When the restaurant sees your order, it will verify that it's a valid order (i.e you didn't order +100 units of the same kind and have a valid delivery address) and then will mark your order as 'Confirmed'
 
 Once your order is confirmed by the restaurant, you only have to wait for it to be delivered to the location you specified earlier. The payment is made when the order arrives.
 
@@ -27,12 +27,12 @@ Aside from the address, the clients are required to submit the delivery location
 
 ### Chat
 When you make an order, a chat between the client and the restaurant is created. This chat is specific to the order.\
-This is useful when a restaurant can't deliver an order on time. This way, they can tell the client via chat how long they have to wait for their order. Sometimes they may be missing a specific ingredient for the food, in which case they can tell the client if they want to continue the order or cancel ir altogether.
+This is useful when a restaurant can't deliver an order on time. This way, they can tell the client how long they have to wait for their order.\
+Another use case is that sometimes they may be missing a specific ingredient for the food, in which case they can tell the client if they want to continue the order or cancel it altogether.
 
 ### Restaurant Fees
-My idea for monetizing this project was to charge restaurants a small fee (say 5%) on every order. At the end of every month I would go personally to each restaurant to collect the fees that were charged.
-Every restaurant has a statistics page where they can see how many in fees they have to pay and have a record of all the orders they had, allowing them to check their balances.
-
+My idea for monetizing this project was to charge restaurants a small fee (say 5%) on every order. At the end of every month I would go personally to each restaurant to collect the fees that were charged.\
+Every restaurant has a stats page where they can see how much fees they have to pay. They also have a record of all the orders they had, allowing them to check their balances.
 
 # Frameworks Used
 
@@ -82,8 +82,7 @@ NOTE: The first build may take a few minutes, if you get a prompt to install
 Install python dependencies:
 >pip3 install flask flask_restful flask_socketio flask_cors flask_jsonpify mysqlclient sqlalchemy passlib 
 
-Now the only thing left to do is to configure the db.\
-Open config.ini in the server folder, and fill it with your DB data:
+Next, enter your DB info in server/config.ini:\
 >[Database]\
 Host = host\
 database = dbname\
