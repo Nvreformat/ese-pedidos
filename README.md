@@ -24,8 +24,7 @@ Now, you only have to wait for it to be delivered to the location you specified 
 
 ### Location on map
 Aside from the address, the clients are required to submit a delivery location when issuing an order. This is easily done with the Maps API, it only takes a few taps.\
-In the city I wanted to implement this, finding a place only by address can sometimes be... tricky.\
-By attaching a location to the order, we can make the delivery process more efficient.
+In the city I wanted to implement this, finding a place only by address can sometimes be... tricky. By attaching a location to the order, we can make the delivery process more efficient.
 
 ### Chat
 When you make an order, a chat between the client and the restaurant is created. This chat is specific to the order.\
