@@ -31,7 +31,7 @@ Aside from the address, the clients are required to submit the delivery location
 
 ### Chat
 When you make an order, a chat between the client and the restaurant is created. This chat is specific to the order.\
-This is useful in the following scenario: A restaurant
+This is useful when a restaurant can't deliver an order on time. This way, they can tell the client via chat how long they have to wait for their order. Sometimes they may be missing a specific ingredient for the food, in which case they can tell the client if they want to continue the order or cancel ir altogether.
 
 # Frameworks Used
 
