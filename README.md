@@ -16,9 +16,9 @@ There are 2 apps, one for the clients and another one for the restaurants.
 
 On the clients app, you will be presented with a choice of restaurants. After picking one, you can then select what food you will order and the delivery destination. Upon issuing an order. it will be marked as 'Pending', this means you have to to wait until the restaurant processes (i.e, confirms) your order.
 
-When the restaurant sees your order, it will verify that it's a valid order (i.e you didn't order +100 units of the same kind and have a valid delivery address) and then will mark your order as 'Confirmed'
+When the restaurant sees your order, it will verify that it's a valid order (i.e you didn't order +100 units of the same kind and have a valid delivery address) and then will mark your order as 'Confirmed'.
 
-Once your order is confirmed by the restaurant, you only have to wait for it to be delivered to the location you specified earlier. The payment is made when the order arrives.
+Now, you only have to wait for it to be delivered to the location you specified earlier. The payment is made when the order arrives and the order is then marked as 'Finished'.
 
 # Features
 
@@ -32,7 +32,7 @@ Another use case is that sometimes they may be missing a specific ingredient for
 
 ### Restaurant Fees
 My idea for monetizing this project was to charge restaurants a small fee (say 5%) on every order. At the end of every month I would go personally to each restaurant to collect the fees that were charged.\
-Every restaurant has a stats page where they can see how much fees they have to pay. They also have a record of all the orders they had, allowing them to check their balances.
+Every restaurant has a stats page where they can see how much fees they have to pay. They also have a record of all the orders they had, allowing them to check their if the fees actually match the orders.
 
 # Frameworks Used
 
