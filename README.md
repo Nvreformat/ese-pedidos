@@ -16,9 +16,9 @@ There are 2 apps, one for the clients and another one for the restaurants.
 
 On the clients app, you will be presented with a choice of restaurants. After picking one, you can then select what food you will order and the delivery destination. Upon issuing an order. it will be marked as 'Pending', this means you have to to wait until the restaurant processes (i.e, confirms) your order.
 
-When the restaurant sees your order, it will verify that it's a valid order (i.e you didn't order +100 units of the same kind and have a valid delivery address) and then will mark your order as 'Confirmed'.
+When the restaurant sees your order, it will verify that it's valid (i.e you didn't order +100 units of the same kind and have a valid delivery address) and then will mark your order as 'Confirmed'.
 
-Now, you only have to wait for it to be delivered to the location you specified earlier. The payment is made when the order arrives and the order is then marked as 'Finished'.
+Now, you only have to wait for it to be delivered to the location you specified earlier. The payment is made when the order arrives and the order is marked as 'Finished'.
 
 # Features
 
@@ -76,13 +76,13 @@ Put your Maps API key on src/index.html of each project:
 Then just go to any app folder (either client or restaurant) and run this command to build and test:
 >ionic serve --lab
 
-NOTE: The first build may take a few minutes, if you get a prompt to install 
+NOTE: The first build may take a few minutes as ionic downloads dependencies, so be patient.
 
 ### Server
 Install python dependencies:
 >pip3 install flask flask_restful flask_socketio flask_cors flask_jsonpify mysqlclient sqlalchemy passlib 
 
-Next, enter your DB info in server/config.ini:\
+Next, enter your DB info in config.ini:\
 >[Database]\
 Host = host\
 database = dbname\
