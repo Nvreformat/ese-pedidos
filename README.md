@@ -57,7 +57,7 @@ MariaDB (on live demo server)
 # Things that don't work
 
 ## Phone verification
-I originally intended to send an SMS with a code to the phone being verified and make the user enter this code on the app. Since sending SMS is a paid service and there are many providers with different implementations, I decided to skip this. So you can just log in with any phone number and it will work as if it was a different client account. You'll have to implement this yourself.
+I originally intended to send an SMS with a code to the phone being verified and make the user enter this code on the app. Since sending SMS is a paid service and there are many providers with different implementations, I decided to skip this. This means you can just log in with any phone number and it will work as if it was a different client account. You'll have to implement this yourself.
 
 ## Changing the logo of a restaurant
 TODO
