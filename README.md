@@ -47,7 +47,7 @@ Google Maps JS
 
 Flask\
 Flask SocketIO\
-SQLAlchemy
+SQLAlchemy\
 MariaDB (on live demo server)
 
 # Live Demo
