@@ -1,0 +1,23 @@
+<div class="container">
+    <ion-grid no-margin no-padding>
+        <div *ngFor="let product of _order.products">
+            <ion-row nowrap class="dotted">
+                <ion-col no-padding>
+                    <p class="order">x{{ product.count }} {{ product.name }}</p>
+                </ion-col>
+                <ion-col col-auto no-padding>
+                    <p float-right class="price">{{ (product.price * product.count) | currency }}</p>
+                </ion-col>
+            </ion-row>
+        </div>
+        <br>
+        <ion-row nowrap class="dotted">
+            <ion-col no-padding>
+                <p class="order">Total:</p>
+            </ion-col>
+            <ion-col col-auto no-padding>
+                <p float-right class="price">{{ _order.price | currency }}</p>
+            </ion-col>
+        </ion-row>
+    </ion-grid>
+</div>

@@ -1,0 +1,22 @@
+<ion-header>
+    <ion-navbar>
+        <ion-title>Order N° {{ order.id }}</ion-title>
+        <ion-buttons end>
+            <button ion-button icon-start (click)="showChat()">
+                <ion-icon name="chatboxes"></ion-icon>
+                Chat
+            </button>
+        </ion-buttons> 
+    </ion-navbar>
+</ion-header>
+
+<ion-content>
+    <ion-card>
+        <h3 class="resume-title">Order Details</h3>
+        <order-products [order]=order></order-products> 
+    </ion-card>
+
+    <div *ngIf="util.isOrderCancellable(order)" class="button-container">
+	    <button (click)="cancelOrder()" color="danger" ion-button full>Cancel Order</button>
+    </div>
+</ion-content>

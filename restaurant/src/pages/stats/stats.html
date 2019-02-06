@@ -1,0 +1,86 @@
+<ion-header>
+    <ion-navbar>
+        <button ion-button menuToggle>
+            <ion-icon name="menu"></ion-icon>
+        </button>
+        <ion-title>Statistics</ion-title>                                                                                                                                  
+    </ion-navbar>
+</ion-header>
+<ion-content>
+    <fancy-spinner *ngIf="!stats"></fancy-spinner>
+    <ion-card>
+        <p text-center class="resume-title">Monthly Stats</p>
+        <ion-grid no-margin no-padding>
+            <ion-row>
+                <ion-col>
+                    <p class="order">Orders issued</p>
+                </ion-col>
+                <ion-col col-auto>
+                    <p float-right class="price">{{ stats?.month.orderCount }}</p>
+                </ion-col>
+            </ion-row>
+            <ion-row>
+                <ion-col>
+                    <p class="order">Gross Income</p>
+                </ion-col>
+                <ion-col col-auto>
+                    <p float-right class="price">{{ stats?.month.grossIncome | currency }}</p>
+                </ion-col>
+            </ion-row>
+            <ion-row>
+                <ion-col>
+                    <p class="order">Fees</p>
+                </ion-col>
+                <ion-col col-auto>
+                    <p float-right class="price">{{ stats?.month.fee | currency }}</p>
+                </ion-col>
+            </ion-row>
+            <ion-row>
+                <ion-col>
+                    <p class="order">Net Income</p>
+                </ion-col>
+                <ion-col col-auto>
+                    <p float-right class="price">{{ stats?.month.netIncome | currency }}</p>
+                </ion-col>
+            </ion-row>
+        </ion-grid>
+    </ion-card>
+    <ion-card>
+        <p text-center class="resume-title">Historic Statistics</p>
+        <ion-grid no-margin no-padding>
+            <ion-row>
+                <ion-col>
+                    <p class="order">Orders issued</p>
+                </ion-col>
+                <ion-col col-auto>
+                    <p float-right class="price">{{ stats?.all.orderCount }}</p>
+                </ion-col>
+            </ion-row>
+            <ion-row>
+                <ion-col>
+                    <p class="order">Gross Income</p>
+                </ion-col>
+                <ion-col col-auto>
+                    <p float-right class="price">{{ stats?.all.grossIncome | currency }}</p>
+                </ion-col>
+            </ion-row>
+            <ion-row>
+                <ion-col>
+                    <p class="order">Pending fees</p>
+                </ion-col>
+                <ion-col col-auto>
+                    <p float-right class="price">{{ stats?.all.fee - stats?.paidFees | currency }}</p>
+                </ion-col>
+            </ion-row>
+            <ion-row>
+                <ion-col>
+                    <p class="order">Net Income</p>
+                </ion-col>
+                <ion-col col-auto>
+                    <p float-right class="price">{{ stats?.all.netIncome | currency }}</p>
+                </ion-col>
+            </ion-row>
+        </ion-grid>
+    </ion-card>
+    <button (click)="showHistory()" ion-button full round type="submit">Show order history</button>
+</ion-content>

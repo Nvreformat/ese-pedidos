@@ -1,0 +1,7 @@
+{
+  "name": "SPedidos",
+  "integrations": {
+    "cordova": {}
+  },
+  "type": "ionic-angular"
+}

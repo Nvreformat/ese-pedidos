@@ -1,0 +1,17 @@
+<popup-window title="Update Profile">
+    <form [formGroup]="dataForm">
+        <ion-grid>
+            <ion-row>
+                <ion-col no-margin no-padding>
+                    <fancy-input maxlength="50" formControlName="name" type="text" title="Nombre del restaurante"></fancy-input>
+                    <fancy-input maxlength="100" formControlName="description" type="text" title="Descripción"></fancy-input>
+                </ion-col>
+            </ion-row>
+            <ion-row>
+                <ion-col>
+                    <button ion-button full small [disabled]="!dataForm.valid" (click)="onUpdateProfile()">Update</button>
+                </ion-col>
+            </ion-row>
+        </ion-grid>
+    </form>
+</popup-window>

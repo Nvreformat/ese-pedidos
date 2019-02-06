@@ -1,0 +1,63 @@
+<ion-card class="card">
+    <h3 class="resume-title">Order Info</h3>
+    <ion-list>
+        <ion-grid no-margin no-padding>
+            <ion-row>
+                <ion-col>
+                    <p class="order">Order time:</p>
+                </ion-col>
+                <ion-col col-auto>
+                    <p float-right class="price"> {{ _order.date * 1000 | date: 'hh:mm' }} </p>
+                </ion-col>
+            </ion-row>
+        
+        <ion-row>
+            <ion-col>
+                <p class="order">Fee (5%):</p>
+            </ion-col>
+            <ion-col col-auto>
+                <p float-right class="price">{{ _order.fee | currency }}</p>
+            </ion-col>
+        </ion-row>
+
+        <ion-row>
+            <ion-col>
+                <p class="order">Order status:</p>
+            </ion-col>
+            <ion-col col-auto>
+                <p float-right class="price">{{ util.orderStatusToDescription(_order.status) }}</p>
+            </ion-col>
+        </ion-row>
+
+        <ion-row>
+            <ion-col>
+                <p class="order">Address:</p>
+            </ion-col>
+            <ion-col col-auto>
+                <p float-right class="price">{{_order.address}}</p>
+            </ion-col>
+        </ion-row>
+      </ion-grid>
+      
+    </ion-list>
+    <div class="mapsContainer">
+		<button *ngIf="!util.isOrderFinished(_order)" (click)="onMapClick()" ion-button full small round type="submit">Show location on map</button>
+		<p *ngIf="_order.comments" class="comments" class="order">Comments: {{ _order.comments }}</p>
+	</div>
+</ion-card>
+  
+<ion-card class="card">
+    <h3 class="resume-title">Order Items</h3>
+    <order-products [order]=_order></order-products> 
+</ion-card>
+
+<ion-grid no-margin no-padding *ngIf="util.isOrderCancellable(_order)">
+    <ion-row>
+        <ion-col col-6 text-center>
+            <button color="danger" ion-button type="submit" (click)="onDiscardClick()">{{ util.isOrderPending(_order) ? "Discard" : "Cancel" }} order</button>
+        </ion-col>
+        <ion-col col-6 text-center>
+            <button ion-button type="submit" (click)="onConfirmClick()">{{ util.isOrderPending(_order) ? "Confirm" : "Finish" }} order</button>
+        </ion-col>
+    </ion-row>
+</ion-grid>

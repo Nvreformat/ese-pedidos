@@ -1,0 +1,28 @@
+<ion-header>
+    <ion-navbar>
+        <button ion-button menuToggle>
+            <ion-icon name="menu"></ion-icon>
+        </button>
+        <ion-title>Restaurantes</ion-title>
+    </ion-navbar>
+</ion-header>
+<ion-content>
+    <fancy-spinner *ngIf="!restaurants"></fancy-spinner>
+    <ion-list no-margin no-padding>
+        <ion-item *ngFor="let restaurant of restaurants" [class]="restaurant.state">
+            <ion-card (click)="onClick(restaurant)">
+                <ion-grid no-margin no-padding>
+                    <ion-row nowrap>
+                        <ion-col col-auto>
+                            <img class="logo" src="assets/logo.png">
+                        </ion-col>
+                        <ion-col>
+                            <h3 text-wrap class="name">{{ restaurant.name }}</h3>
+                            <p text-wrap class="description">{{ restaurant.description }}</p>
+                        </ion-col>
+                    </ion-row>
+                </ion-grid>
+            </ion-card>
+        </ion-item>
+    </ion-list>
+</ion-content>

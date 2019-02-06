@@ -1,0 +1,24 @@
+<ion-header>
+    <ion-navbar>
+        <ion-title>Chat with {{ isClient ? 'restaurant' : 'client' }}</ion-title>                                                                                                                                  
+    </ion-navbar>
+</ion-header>
+<ion-content class="no-scroll">
+    <fancy-spinner *ngIf="!messages"></fancy-spinner>
+    <div class="wrap">
+        <div class="flex-container">
+            <div #chatWindow class="container">
+                <div>
+                    <div [class]="isClient == message.fromClient ? 'bubble right' : 'bubble left'" *ngFor="let message of messages">
+                        <p class="text">{{ message.message }}</p>
+                        <p class="date">{{ message.date * 1000 | date: 'hh:mm' }}</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <form *ngIf="!util.isOrderDone(order)" (ngSubmit)="sendChat();" [formGroup]="chatForm" class="form">
+			<ion-input maxlength="100" class="chatbox" formControlName="text"></ion-input>
+			<button class="send-chat" type="submit" ion-button small no-margin no-padding [disabled]="!chatForm.valid">Send</button>
+		</form>
+    </div>
+</ion-content>

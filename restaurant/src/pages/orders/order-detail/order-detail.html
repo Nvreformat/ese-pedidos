@@ -1,0 +1,15 @@
+<ion-header>
+    <ion-navbar>
+        <ion-title>Order Nº {{ order.id }}</ion-title>
+        <ion-buttons end>
+            <button ion-button icon-start (click)="showChat()">
+                <ion-icon name="chatboxes"></ion-icon>
+                Chat
+            </button>
+        </ion-buttons>                                                                                                                                    
+    </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+    <order-info [order]=order (mapClick)="showMap()"></order-info>
+</ion-content>

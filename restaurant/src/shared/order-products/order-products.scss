@@ -1,0 +1,20 @@
+order-products {
+    .order {
+        margin-bottom: 3px !important;
+        margin-top: 3px !important;
+        font-size: 16px;
+        white-space: normal;
+        color: gray;
+    }
+
+    .price {
+        margin-bottom: 3px !important;
+        margin-top: 3px !important;
+        font-size: 16px;
+        color: gray;
+    }
+
+    .dotted {
+        border-bottom: 2px dotted lightgray;
+    }
+}

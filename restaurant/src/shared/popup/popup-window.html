@@ -1,0 +1,15 @@
+<div class="popup-container">
+    <ion-card class="popup-card">
+        <ion-grid no-margin no-padding>
+            <ion-row align-items-center row-auto>                    
+                <ion-col col-auto>
+                    <ion-icon class="icon" color="dark" name="arrow-back" (click)="closeModal()"></ion-icon>
+                </ion-col>
+                <ion-col col-auto>
+                    <p class="title">{{ _title }}</p>
+                </ion-col>
+            </ion-row>
+        </ion-grid>
+        <ng-content></ng-content>
+    </ion-card>
+</div>

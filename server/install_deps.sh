@@ -1,0 +1,1 @@
+pip3 install flask flask-restful sqlalchemy flask_jsonpify passlib flask_cors pymysql mysqlclient

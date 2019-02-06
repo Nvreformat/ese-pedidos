@@ -1,0 +1,21 @@
+<popup-window [title]="(product ? 'Edit' : 'New') + ' Product'">
+    <form [formGroup]="productForm">
+        <ion-grid>
+            <ion-row>
+                <ion-col no-margin no-padding>
+                    <fancy-input maxlength="50" formControlName="name" type="text" title="Name"></fancy-input>
+                    <fancy-input maxlength="100" formControlName="description" type="text" title="Description"></fancy-input>
+                    <fancy-input maxlength="10" formControlName="price" type="number" title="Price"></fancy-input>
+                </ion-col>
+            </ion-row>
+            <ion-row>
+                <ion-col [hidden]="!product" > 
+                    <button color="danger" ion-button full small (click)="onEditOrCreateProduct(true)">Eliminar</button>
+                </ion-col>
+                <ion-col>
+                    <button ion-button full small [disabled]="!productForm.valid" (click)="onEditOrCreateProduct()">{{product ? "Save" : "Add Product"}}</button>
+                </ion-col>
+            </ion-row>
+        </ion-grid>
+    </form>
+</popup-window>

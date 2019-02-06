@@ -1,0 +1,37 @@
+fancy-input {
+    input-wrapper .label.label-md {
+        display: inline-block;
+        vertical-align: middle !important;
+    }
+
+    input {
+        margin: 3px !important;
+        margin:auto;
+        display:flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+    }
+
+    .input-wrapper {
+        margin-bottom: 2px;
+        margin-left: 2px;
+        margin-right: 2px;
+    }
+
+    .input-border {
+        background-color: whitesmoke;
+        border: 1px solid lightgray;
+        border-radius: 5px;
+        font-size: 16px;
+    }
+
+    .label {
+        margin: 0px;
+        margin-bottom: 3px;
+        font-size: 16px;
+    }
+
+    .container {
+        margin: 8px;
+    }
+}

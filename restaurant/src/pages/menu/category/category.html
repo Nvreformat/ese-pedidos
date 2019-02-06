@@ -1,0 +1,19 @@
+<popup-window [title]="(category ? 'Edit' : 'New') + ' Category'">
+    <form [formGroup]="categoryForm">
+        <ion-grid>
+            <ion-row>
+                <ion-col no-margin no-padding>
+                    <fancy-input maxlength="50" formControlName="name" type="text" title="Nombre de la categoria"></fancy-input>
+                </ion-col>
+            </ion-row>
+            <ion-row>
+                <ion-col [hidden]="!category" > 
+                    <button color="danger" ion-button full small (click)="onEditOrCreateCategory(true)">Delete</button>
+                </ion-col>
+                <ion-col>
+                    <button ion-button full small [disabled]="!categoryForm.valid" (click)="onEditOrCreateCategory()">{{category ? "Save" : "Add Category"}}</button>
+                </ion-col>
+            </ion-row>
+        </ion-grid>
+    </form>
+</popup-window>

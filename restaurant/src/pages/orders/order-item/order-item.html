@@ -1,0 +1,16 @@
+<ion-card class="card">
+    <ion-grid no-margin no-padding>
+        <ion-row nowrap>
+            <ion-col>
+                <h3 class="order">Order Nº {{_order.id}}</h3>
+                <p class="address">{{_order.address}}</p>
+                <br>
+                <p *ngIf="_order.status != 2 && _order.status != -1" [ngStyle]="{'color': _order.minutesSinceOrdered > 10 ? (_order.minutesSinceOrdered > 20 ? 'red' : 'orangered') : 'green'}" class="address">{{ getMinutesString(_order.minutesSinceOrdered) }}</p>
+                <p *ngIf="_order.status == 2 || _order.status == -1" class="address">{{ (_order.date * 1000 | date: 'dd/MM/yyyy') + " at " + (_order.date * 1000 | date: 'hh:mm') }}</p>
+            </ion-col>
+            <ion-col col-auto justify-content-center align-items-center>
+                <h3  float-right class="price">{{ _order.price | currency }}</h3>
+            </ion-col>
+        </ion-row>
+    </ion-grid>
+</ion-card>

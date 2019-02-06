@@ -1,0 +1,31 @@
+<ion-header>
+    <ion-navbar>
+        <button ion-button menuToggle>
+            <ion-icon name="menu"></ion-icon>
+        </button>
+        <ion-title>My Orders</ion-title>
+    </ion-navbar>
+</ion-header>
+<ion-content>
+    <fancy-spinner *ngIf="!orders"></fancy-spinner>
+    <p *ngIf="orders?.length == 0" class="no-orders">You don't have any orders</p>
+    <div *ngFor="let order of orders">
+        <ion-card class="card" (click)="onClick(order)">
+            <ion-grid no-margin no-padding>
+                <ion-row nowrap>
+                    <ion-col>
+                        <h3 class="order">Order from {{ restaurantFromId(order.restaurantId).name }}</h3>
+                        <p class="address">{{ order.address }}</p>
+                        <p class="address">{{ count(order) }} article(s)</p>
+                        <p class="address">Total: {{ order.price | currency }}</p>
+                        <br>
+                        <p class="address">Order status: <span [ngStyle]="{'color': util.orderStatusToColor(order.status)}"> {{ util.orderStatusToDescription(order.status) }}</span></p>
+                    </ion-col>
+                    <ion-col col-auto justify-content-center align-items-center>
+                        <ion-icon class="icon" name="arrow-forward"></ion-icon>
+                    </ion-col>
+                </ion-row>
+            </ion-grid>
+        </ion-card>
+    </div>
+</ion-content>

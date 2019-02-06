@@ -1,0 +1,19 @@
+<ion-header>
+    <ion-navbar>
+        <ion-buttons left>
+            <button ion-button icon-only (click)="viewCtrl.dismiss()">
+                <ion-icon name="arrow-back"></ion-icon>
+            </button>
+        </ion-buttons>
+        <ion-title>
+            Map
+        </ion-title>
+    </ion-navbar>
+</ion-header>
+
+<ion-content>
+    <div id="map"></div>
+    <div id="over-map">
+        <button no-margin [disabled]="!marker" (tap)="selectLocation()" color="secondary" ion-button full>Select</button>
+   </div>
+</ion-content>

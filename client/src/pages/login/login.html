@@ -1,0 +1,17 @@
+<ion-header>
+	<ion-navbar>
+		<ion-title>Verify phone number</ion-title>
+	</ion-navbar>
+</ion-header>
+
+<ion-content>
+	<div class="container">
+		<form (ngSubmit)="verify(loginForm.value);" [formGroup]="loginForm">
+			<p class="text">First of all, we need to verify your phone number</p>
+			<fancy-input maxlength="50" title="Phone Number" type="number" formControlName="number"></fancy-input>
+			<p class="text">Don't worry, your number will be hidden from restaurants <br> This step is needed in order to avoid fake orders</p>
+			<button type="submit" ion-button full [disabled]="!loginForm.valid">Verify</button>
+		</form>
+	</div>
+	
+</ion-content>

@@ -1,0 +1,57 @@
+<ion-header>
+    <ion-navbar>
+        <button ion-button menuToggle>
+            <ion-icon name="menu"></ion-icon>
+        </button>
+        <ion-title>My Restaurant</ion-title>                                                                                                                                  
+    </ion-navbar>
+</ion-header>
+ 
+<ion-content>
+    <fancy-spinner *ngIf="!restaurant"></fancy-spinner>
+    <ion-card>
+        <ion-grid no-margin no-padding>
+            <ion-row nowrap>
+                <ion-col col-auto>
+                    <img class="logo" src="assets/logo.png">
+                </ion-col>
+                <ion-col>
+                    <h3 text-wrap class="name">{{ restaurant?.name }}</h3>
+                    <p text-wrap class="description">{{ restaurant?.description }}</p>
+                </ion-col>
+            </ion-row>
+        </ion-grid>
+        <button ion-button full small round (click)="updateData()">Change restaurant profile</button> 
+    </ion-card>
+    <ion-card>
+    <p text-center class="title">Menu</p>
+    <ion-list class="accordion-list">
+        <ion-list-header no-margin *ngFor="let category of restaurant?.menu; let i = index" no-lines no-padding>
+            <button ion-item (click)="toggleSection(i)" detail-none [ngClass]="{'section-active': category.open, 'section': !category.open}">
+                <ion-icon item-left name="arrow-forward" *ngIf="!category.open"></ion-icon>
+                <ion-icon item-left name="arrow-down" *ngIf="category.open"></ion-icon>
+                {{ category.name }}
+                <button ion-button icon-only clear item-end (click)="addProduct($event, category, categoryIndex)">
+                    <ion-icon name="add"></ion-icon>
+                </button>
+                <button ion-button icon-only clear item-end (click)="editCategory($event, category, categoryIndex)">
+                    <ion-icon name="color-wand"></ion-icon>
+                </button>
+            </button>
+            <ion-list *ngIf="category.products && category.open" no-lines>
+                <ion-list-header no-margin *ngFor="let product of category.products; let j = index" no-padding>
+                    <ion-item ion-item class="product-item" text-wrap>
+                        <p class="product-title">{{ product.name }}</p>
+                        <p class="product-description">{{ product.description }}</p>
+                        <p item-end>{{ product.price | currency }}</p>
+                        <button ion-button icon-only clear item-end (click)="editProduct($event, product, productIndex)">
+                            <ion-icon name="color-wand"></ion-icon>
+                        </button>
+                    </ion-item>
+                </ion-list-header>
+            </ion-list>
+        </ion-list-header>
+    </ion-list>
+    <button ion-button full small round  (click)="addCategory($event)">Add Category</button>
+    </ion-card>
+</ion-content>

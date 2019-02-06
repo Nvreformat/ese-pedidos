@@ -1,0 +1,18 @@
+<ion-header>
+	<ion-navbar>
+		<ion-title>Login</ion-title>
+	</ion-navbar>
+</ion-header>
+
+<ion-content>
+	<form (ngSubmit)="login(loginForm.value)" [formGroup]="loginForm">
+		<ion-list inset>
+			<fancy-input maxlength="50" formControlName="username" type="text" title="Username"></fancy-input>
+			<fancy-input maxlength="50" formControlName="password" type="password" title="Password"></fancy-input>
+		</ion-list>
+
+		<div padding-horizontal>
+			<button type="button" ion-button full small (click)="login()">Login</button>
+		</div>
+	</form>
+</ion-content>

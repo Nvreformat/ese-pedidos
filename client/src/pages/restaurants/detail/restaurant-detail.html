@@ -1,0 +1,36 @@
+<ion-header>
+    <ion-navbar>
+        <button ion-button menuToggle>
+            <ion-icon name="menu"></ion-icon>
+        </button>
+        <ion-title>{{ restaurant.name }}</ion-title>
+    </ion-navbar>
+</ion-header>
+<ion-content>
+    <ion-list class="accordion-list">
+        <ion-list-header no-margin *ngFor="let category of restaurant.menu; let categoryIndex = index" no-lines no-padding>
+            <button class="category-button" ion-item (click)="toggleSection(categoryIndex)" detail-none [ngClass]="{'section-active': category.open, 'section': !category.open}">
+                <ion-icon item-left name="arrow-forward" *ngIf="!category.open"></ion-icon>
+                <ion-icon item-left name="arrow-down" *ngIf="category.open"></ion-icon>
+                {{ category.name }} 
+            </button>
+                
+            <ion-list *ngIf="category.products && category.open" no-lines>
+                <ion-list-header no-margin *ngFor="let product of category.products; let productIndex = index" no-padding [class]="product.state">
+                    <ion-item ion-item class="product-item" text-wrap>
+                        <p class="title">{{ product.name }} {{ product.count > 0 ? "(x" + product.count + ")" : "" }}</p>
+                        <p class="description">{{ product.description }}</p>
+                        <button [style.display]="product.count > 0 ? 'unset' : 'none'" (click)="remove(categoryIndex, productIndex)" item-end class="remove-button" color="danger" small icon-only ion-button>
+                            <ion-icon name="remove" ></ion-icon>
+                        </button>
+                        <button item-end class="add-button" (click)="add(categoryIndex, productIndex)" small ion-button [color]="product.count > 0 ? 'secondary' : 'green'">{{ (product.count > 0 ? (product.price * product.count) : product.price) | currency }}</button>
+                        <p class="description" item-end></p>
+                    </ion-item>
+                </ion-list-header>
+            </ion-list>
+        </ion-list-header>
+    </ion-list>
+</ion-content>
+<ion-footer no-shadow>
+	<button (click)="next()" [disabled]="productCount == 0" ion-button full>Next</button>
+</ion-footer>

@@ -1,0 +1,18 @@
+<ion-header *ngIf="title">
+    <ion-navbar>
+        <button ion-button menuToggle>
+            <ion-icon name="menu"></ion-icon>
+        </button>
+        <ion-title>{{ title }}</ion-title>
+    </ion-navbar>
+</ion-header>
+
+<ion-content>
+    <fancy-spinner *ngIf="!orders"></fancy-spinner>
+    <ion-list no-margin no-padding>
+        <ion-item no-margin no-padding *ngFor="let order of orders" [class]="order.state" (click)="onClick(order)">
+            <p *ngIf="isFirstOrderOfTheMonth(order)" class="month">Month of {{ order.date * 1000 | date: 'MM/yy' }}</p>
+            <order-item [order]=order></order-item>
+        </ion-item>
+    </ion-list>
+</ion-content>

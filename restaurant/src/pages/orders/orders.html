@@ -1,0 +1,15 @@
+<ion-header>
+    <ion-navbar>
+        <button ion-button menuToggle>
+            <ion-icon name="menu"></ion-icon>
+        </button>
+        <ion-title>Orders</ion-title>
+    </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+    <ion-tabs tabsPlacement="top">
+        <ion-tab tabTitle="Pending" [root]="tab1Root" [rootParams]="{ filter: [0] }"></ion-tab>
+        <ion-tab tabTitle="Confirmed" [root]="tab2Root" [rootParams]="{ filter: [1] }"></ion-tab>
+    </ion-tabs>
+</ion-content>

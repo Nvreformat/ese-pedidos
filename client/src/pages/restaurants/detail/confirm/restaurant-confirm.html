@@ -1,0 +1,26 @@
+<ion-header>
+    <ion-navbar>
+        <button ion-button menuToggle>
+            <ion-icon name="menu"></ion-icon>
+        </button>
+        <ion-title>Confirm Order</ion-title>
+    </ion-navbar>
+</ion-header>
+
+<ion-content>
+    <ion-card>
+        <h3 class="resume-title">Order Details</h3>
+        <order-products [order]=order></order-products> 
+    </ion-card>
+    <form (ngSubmit)="makeOrder(confirmForm.value);" [formGroup]="confirmForm">
+        <ion-card>
+            <h3 class="resume-title">Additional Info</h3>
+            <fancy-input maxlength="50" type="text" formControlName="address" title="Address"></fancy-input>
+            <fancy-input maxlength="50" type="text" formControlName="comments" title="Special request (Optional)"></fancy-input>
+        </ion-card>
+        <ion-card>
+            <button (tap)="getLocation()" color="secondary" ion-button full>Select Location {{ coords ? "(Done)" : "" }}</button>
+            <button  ion-button full [disabled]="!confirmForm.valid || !coords">Issue Order</button>
+         </ion-card>
+    </form>
+</ion-content>
