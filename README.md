@@ -72,7 +72,7 @@ Install cordova and ionic
 >sudo npm -g install cordova ionic
 
 Put your Maps API key on src/index.html of each project:
-><script src="https://maps.googleapis.com/maps/api/js?key=YourAPIKey&callback=initMap"async defer></script>
+><script src="https://<span></span>maps.googleapis.com/maps/api/js?key=YourAPIKey&callback=initMap"async defer></script>
 
 Then just go to any app folder (either client or restaurant) and run this command to build and test:
 >ionic serve --lab
