@@ -12,7 +12,7 @@ if __name__ == '__main__':
     api = Api(app)
     CORS(app)
 
-    database.setup()
+    database.setup("restaurants")
     #api.add_resource(Employees_Name, '/employees/<employee_id>')
 
     app.run(host = '0.0.0.0', port='1337', debug=True, use_reloader=False)
