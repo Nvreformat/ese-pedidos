@@ -1,5 +1,5 @@
 from sqlalchemy import create_engine
-from sqlalchemy.orm import Session
+from sqlalchemy.orm import sessionmaker, scoped_session
 from sqlalchemy.ext.declarative import declarative_base
 import sqlalchemy
 from random import randint
@@ -11,36 +11,24 @@ import configparser
 
 Base = declarative_base()
 
-def setup():
-    global engine
-    global connection
-    global session
+def get_url():
     config = configparser.ConfigParser()
     config.read(os.getcwd() + "/config.ini")
     host = config.get("Database", "host")
     database = config.get("Database", "database")
     username = config.get("Database", "username")
     password = config.get("Database", "password")
+    path = config.get("Database", "path")
+    url = "mysql+mysqldb://" + username + ":" + password + "@" + host + "/" + database + "?unix_socket=" + path
+    return url
 
-    engine = create_engine("mysql+mysqldb://" + username + ":" + password + "@" + host + "/" + database + "", pool_recycle=3600, pool_pre_ping=True)
+engine = create_engine(get_url(), pool_recycle=3600, pool_pre_ping=True)
+get_session = scoped_session(sessionmaker(bind=engine))
+
+def setup(search_for):
     connection = engine.connect()
-    session = Session(engine)
-
-    # First run check
-    if (not engine.dialect.has_table(connection, "restaurants")):
+    if (not engine.dialect.has_table(connection, search_for)):
         first_run()
-
-def get_session():
-    global session
-    global engine
-
-    if (has_request_context()):
-        if (not hasattr(request, "session")):
-            request.session = Session(engine)
-
-        return request.session
-    else:
-        return session
 
 # Setup tables and user on first run
 def first_run():
@@ -69,13 +57,13 @@ def first_run():
     Product.add("Turkey Club", "Roasted turkey breast, bacon, lettuce, avocado and tomato on baguette", 8, restaurant, sandwichesCategory)
     Product.add("Reuben", "Corned beef, melted swiss, sauerkraut and thousand island on marbled rye", 8, restaurant, sandwichesCategory)
     Product.add("Shrimp Cilantro Wrap", "Shrimp, avocado, mixed greens, salsa, cilantro and may on a tomato tortilla", 8.5, restaurant, sandwichesCategory)
-    
+
     burgerCategory = Category.add("Burgers", restaurant)
     Product.add("Grass-fed Beef Burger", "With sharp cheddar, heirloom tomatoes and caramelized onions", 9.5, restaurant, burgerCategory)
     Product.add("Mushroom Swiss Burger", "With sautéed mushrooms and melted swiss on a home-baked roll", 10, restaurant, burgerCategory)
     Product.add("Hickory Burger", "Topped with cheddar, hickory smoked bacon and smoked barbecue sauce", 10, restaurant, burgerCategory)
     Product.add("Chicken Burger", "Grilled chicken breast with heirloom tomatoes, avocado and sprouts on a home-baked roll", 9, restaurant, burgerCategory)
-    
+
     saladCategory = Category.add("Salads", restaurant)
     Product.add("Caesar Salad", "Romaine, fresh parmesan, seasoned croutons and black pepper with garlic anchovy dressing", 6.75, restaurant, saladCategory)
     Product.add("Red Iceberg Salad", "With sweet corn, blackberries, goat cheese and fresh basil", 9.25, restaurant, saladCategory)
@@ -100,7 +88,7 @@ def first_run():
         for y in range(productCount):
             id = randint(0, 11)
             while (id in used):
-               id = randint(0, 11) 
+               id = randint(0, 11)
 
             used[id] = True
             amount = randint(1, 2)

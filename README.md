@@ -81,14 +81,15 @@ NOTE: The first build may take a few minutes as ionic downloads dependencies, so
 
 ### Server
 Install python dependencies:
->pip3 install flask flask_restful flask_socketio flask_cors flask_jsonpify mysqlclient sqlalchemy passlib 
+>pip3 install flask flask-restful flask-socketio flask-cors flask-jsonpify mysqlclient sqlalchemy passlib 
 
 Next, enter your DB info in config.ini:\
 >[Database]\
 Host = host\
 database = dbname\
 username = user\
-password = pass
+password = pass\
+path = /socket/path
 
 Run the server:
 > python3 main.py
